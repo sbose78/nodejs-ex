@@ -1,0 +1,5 @@
+bases:
+- ../template/nodejs-ex-k
+
+patches:
+  - service_port.yaml

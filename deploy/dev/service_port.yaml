@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "nodejs-example"
+spec:
+  ports:
+  - name: web
+    port: 9090
+    targetPort: 9090

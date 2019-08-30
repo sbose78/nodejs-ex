@@ -1,0 +1,5 @@
+commonLabels:
+  app: nodejs-ex-kustomize
+
+resources:
+  - templates/service.yaml
