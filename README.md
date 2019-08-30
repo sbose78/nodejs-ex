@@ -22,6 +22,8 @@ To deploy the chart using Helm 3, run
 helm install template --generate-name
 ```
 
+### Environment-specific deployments
+
 Developers typically have their code deployed in multiple environments. 
 
 Customizations to the application templates have been defined using [Kustomize](https://github.com/kubernetes-sigs/kustomize)
