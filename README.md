@@ -15,7 +15,7 @@ The CD pipeline, defined as a Tekton Pipeline, has been added to [build/cd/](../
 
 ### Deployment
 
-Everything needed to deploy the application has been deployed as a Helm chart in [deploy/template/](../e2e/deploy/template)
+Everything needed to deploy the application has been added as a Helm chart in [deploy/template/](../e2e/deploy/template)
 
 To deploy the chart using Helm 3, run 
 ```
