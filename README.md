@@ -8,7 +8,7 @@ for an end-to-end development workflow.
 ### Build & Pipelines
 
 - A developer typically needs CI for continuously building code. 
-The CI Pipeline, defined as a Tekton Pipeline has been added to [build/ci/](../e2e/build/ci
+The CI Pipeline, defined as a Tekton Pipeline has been added to [build/ci/](../e2e/build/ci)
 
 - A developer typically needs a CD pipeline to build and push images to a registry. 
 The CD pipeline, defined as a Tekton Pipeline, has been added to [build/cd/](../e2e/build/cd)
