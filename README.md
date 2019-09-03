@@ -10,8 +10,28 @@ for an end-to-end development workflow.
 - A developer typically needs CI for continuously building code. 
 The CI Pipeline, defined as a Tekton Pipeline has been added to [build/ci/](../e2e/build/ci)
 
+To setup your CI, run
+```
+make setup-ci
+```
+
+To execute your first CI job, run
+```
+make run-ci
+```
+
 - A developer typically needs a CD pipeline to build and push images to a registry. 
 The CD pipeline, defined as a Tekton Pipeline, has been added to [build/cd/](../e2e/build/cd)
+
+To setup your CI, run
+```
+make setup-cd
+```
+
+To execute your first CI job, run
+```
+make run-cd
+```
 
 ### Deployment
 
@@ -19,8 +39,15 @@ Everything needed to deploy the application has been added as a Helm chart in [d
 
 To deploy the chart using Helm 3, run 
 ```
-helm install template --generate-name
+make helm-install
 ```
+Or you could direcly invoke the `helm3` command,
+
+```
+helm install deploy/template/nodejs-ex-k --generate-name
+
+```
+
 
 ### Environment-specific deployments
 
@@ -32,6 +59,12 @@ Customizations to the application templates have been defined using [Kustomize](
 - [deploy/dev/](../e2e/deploy/dev) 
 
 To see what the customized manifests looked like for `dev`, run
+
+```
+make deploy-dev
+```
+
+Alternatively, you could call the underlying `kustomize` command
 ```
 kustomize build deploy/dev
 ```
@@ -39,6 +72,12 @@ kustomize build deploy/dev
 Similarly, to see what the customized manifests for `stage` look like, run
 
 
+```
+make deploy-stage
+```
+
+
+Alternatively, you could call the underlying `kustomize` command
 ```
 kustomize build deploy/stage
 ```
