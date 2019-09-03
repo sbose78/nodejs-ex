@@ -9,10 +9,10 @@ deploy-stage:
 	kustomize build deploy/stage
 
 preview-helm-install:
-	helm install deploy/template/nodejs-ex-k
+	helm template deploy/template/nodejs-ex-k
 
 helm-install:
-	helm template deploy/template/nodejs-ex-k
+	helm install deploy/template/nodejs-ex-k
 
 setup-ci:
 	build/ci/setup-pipeline.sh
