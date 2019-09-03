@@ -13,6 +13,7 @@ The CI Pipeline, defined as a Tekton Pipeline has been added to [build/ci/](../e
 - A developer typically needs a CD pipeline to build and push images to a registry. 
 The CD pipeline, defined as a Tekton Pipeline, has been added to [build/cd/](../e2e/build/cd)
 
+#### Setup
 
 To setup your CI pipeline, run
 ```
@@ -20,19 +21,15 @@ make setup-ci
 ```
 
 To execute your first CI job, run
-```
-make run-ci
-```
+`make run-ci`
 
 To setup your CD pipeline, run
 ```
 make setup-cd
 ```
 
-To execute your first CI job, run
-```
-make run-cd
-```
+To execute your first CD job, run
+`make run-cd`
 
 ### Deployment
 
@@ -58,6 +55,8 @@ Customizations to the application templates have been defined using [Kustomize](
  in 
 - [deploy/stage/](../e2e/deploy/stage)  
 - [deploy/dev/](../e2e/deploy/dev) 
+
+#### Setup
 
 To see what the customized manifests looked like for `dev`, run
 
