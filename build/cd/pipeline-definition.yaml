@@ -56,3 +56,29 @@ spec:
     emptyDir: {}
   - name: gen-source
     emptyDir: {}
+---
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: s2i-nodejs-pipeline
+spec:
+  resources:
+    - name: source
+      type: git
+    - name: image
+      type: image
+  tasks:
+    - name: build-image
+      taskRef:
+        name: s2i
+      params:
+        - name: BUILDER_IMAGE
+          value: docker.io/centos/nodejs-8-centos7
+      resources:
+        inputs:
+          - name: source
+            resource: source
+        outputs:
+          - name: image
+            resource: image
+---
