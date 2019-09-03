@@ -8,9 +8,13 @@ for an end-to-end development workflow.
 ### Build & Pipelines
 
 - A developer typically needs CI for continuously building code. 
-The CI Pipeline, defined as a Tekton Pipeline has been added to [build/ci/](../e2e/build/ci)
+The CI Pipeline, defined as a Tekton Pipeline has been added to [build/ci/](../e2e/build/ci
 
-To setup your CI, run
+- A developer typically needs a CD pipeline to build and push images to a registry. 
+The CD pipeline, defined as a Tekton Pipeline, has been added to [build/cd/](../e2e/build/cd)
+
+
+To setup your CI pipeline, run
 ```
 make setup-ci
 ```
@@ -20,10 +24,7 @@ To execute your first CI job, run
 make run-ci
 ```
 
-- A developer typically needs a CD pipeline to build and push images to a registry. 
-The CD pipeline, defined as a Tekton Pipeline, has been added to [build/cd/](../e2e/build/cd)
-
-To setup your CI, run
+To setup your CD pipeline, run
 ```
 make setup-cd
 ```
@@ -41,7 +42,7 @@ To deploy the chart using Helm 3, run
 ```
 make helm-install
 ```
-Or you could direcly invoke the `helm3` command,
+Or you could directly invoke the `helm3` command,
 
 ```
 helm install deploy/template/nodejs-ex-k --generate-name
