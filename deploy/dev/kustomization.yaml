@@ -8,4 +8,4 @@ patches:
 # consumed with base's imagestream.yaml
 images:
   - name: nodejs-ex # match images with this name
-    newName: nodejs-dev # override the name
+    newName: nodejs-ex-dev # override the name
