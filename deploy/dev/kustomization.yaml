@@ -3,3 +3,4 @@ bases:
 
 patches:
   - service_port.yaml
+  - buildconfig.yaml

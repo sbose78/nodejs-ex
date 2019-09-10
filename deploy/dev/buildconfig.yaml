@@ -1,0 +1,14 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: "nodejs-example"
+  annotations:
+    description: Defines how to build the application
+spec:
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        namespace: "openshift-dev"
+        name: nodejs:6

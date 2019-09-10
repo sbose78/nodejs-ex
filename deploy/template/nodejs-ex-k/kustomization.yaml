@@ -3,3 +3,4 @@ commonLabels:
 
 resources:
   - templates/service.yaml
+  - templates/buildconfig.yaml
