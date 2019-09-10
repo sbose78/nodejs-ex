@@ -4,3 +4,7 @@ commonLabels:
 resources:
   - templates/service.yaml
   - templates/buildconfig.yaml
+  - templates/imagestream.yaml
+
+configurations: 
+  - kustomizeconfig/imagestream.yaml
