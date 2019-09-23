@@ -2,5 +2,9 @@ kind: ImageStream
 apiVersion: image.openshift.io/v1
 metadata:
   name: "nodejs-example"
-  annotations:
-    description: Keeps track of changes in the application image
+spec:
+  tags:
+    - name: latest
+      from:
+        kind: DockerImage
+        name: nodejs-ex
