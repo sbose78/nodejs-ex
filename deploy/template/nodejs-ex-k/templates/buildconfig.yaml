@@ -24,7 +24,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: "nodejs-example:latest"
+      name: nodejs-ex:latest
   triggers:
   - type: ImageChange
   - type: ConfigChange
